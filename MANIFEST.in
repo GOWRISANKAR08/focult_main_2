@@ -1,4 +1,0 @@
-recursive-include user_module/migrations *
-recursive-include user_module/static *
-recursive-include user_module/templates *
-include README.md
