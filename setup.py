@@ -1,10 +1,23 @@
-from setuptools import setup
+# from setuptools import setup
+
+# setup(
+#     name="user_module",  
+#     version="0.1.0",
+#     packages=["user_module"],
+#     package_dir={"": "."},
+#     include_package_data=True,
+#     install_requires=["Django>=5.0"],
+
+# )
+
+from setuptools import setup, find_packages
 
 setup(
-    name="user_module",  # Must match import name exactly
+    name="django-modules",
     version="0.1.0",
-    packages=["user_module"],
+    packages=find_packages(),  # Auto-finds all modules
     package_dir={"": "."},
     include_package_data=True,
     install_requires=["Django>=5.0"],
+    python_requires=">=3.8",
 )
