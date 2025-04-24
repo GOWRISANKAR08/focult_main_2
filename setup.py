@@ -24,15 +24,29 @@
 # )
 
 
-from setuptools import setup, find_packages
+# from setuptools import setup, find_packages
+
+# from setuptools import setup, find_packages
+
+# setup(
+#     name="main_app",
+#     version="0.1.0",
+#     packages=['main_app', 'main_app.user_module', 'main_app.order_module'],  # Explicit list
+#     package_dir={'main_app': 'main_app'},  # Maps package name to directory
+#     include_package_data=True,
+#     install_requires=["Django>=5.0"],
+#     python_requires=">=3.8",
+#     zip_safe=False,
+# )
+
 
 from setuptools import setup, find_packages
 
 setup(
     name="main_app",
     version="0.1.0",
-    packages=['main_app', 'main_app.user_module', 'main_app.order_module'],  # Explicit list
-    package_dir={'main_app': 'main_app'},  # Maps package name to directory
+    packages=find_packages(),  # Will find main_app and subpackages
+    package_dir={'': '.'},     # Look in current directory
     include_package_data=True,
     install_requires=["Django>=5.0"],
     python_requires=">=3.8",
