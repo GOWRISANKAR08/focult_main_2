@@ -45,8 +45,8 @@ from setuptools import setup, find_packages
 setup(
     name="main_app",
     version="0.1.0",
-    packages=find_packages(),  # Will find main_app and subpackages
-    package_dir={'': '.'},     # Look in current directory
+    packages=find_packages(include=['main_app', 'main_app.*']),  # Explicit include
+    package_dir={'': '.'},  # Look in current directory
     include_package_data=True,
     install_requires=["Django>=5.0"],
     python_requires=">=3.8",
