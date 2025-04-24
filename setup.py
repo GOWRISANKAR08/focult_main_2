@@ -10,15 +10,29 @@
 
 # )
 
+# from setuptools import setup, find_packages
+
+# setup(
+#     name="django_modules",
+#     version="0.1.0",
+#     packages=find_packages(),  # Auto-finds all modules
+#     package_dir={"": "."},
+#     include_package_data=True,
+#     install_requires=["Django>=5.0"],
+#     python_requires=">=3.8",
+#     zip_safe=False,
+# )
+
+
 from setuptools import setup, find_packages
 
 setup(
-    name="django_modules",
+    name="main_apps",
     version="0.1.0",
-    packages=find_packages(),  # Auto-finds all modules
-    package_dir={"": "."},
+    packages=find_packages(include=['main_apps', 'main_apps.*']),
     include_package_data=True,
     install_requires=["Django>=5.0"],
     python_requires=">=3.8",
     zip_safe=False,
 )
+
