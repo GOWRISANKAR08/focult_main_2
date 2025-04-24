@@ -27,9 +27,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="main_apps",
+    name="main_app",
     version="0.1.0",
-    packages=find_packages(include=['main_apps', 'main_apps.*']),
+    packages=find_packages(include=['main_app', 'main_app.*']),
     include_package_data=True,
     install_requires=["Django>=5.0"],
     python_requires=">=3.8",
